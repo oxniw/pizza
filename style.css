@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative; /* Ensure body acts as a containing block for absolute positioning */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pizza {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+    cursor: pointer; /* Adding a pointer cursor to indicate it's clickable */
+}
+
+.number {
+    margin-top: 5px; /* Adjust the spacing as needed */
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.market {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns items to the left */
+    width: 100%;
+    padding: 10px;
+    background-color: lightgrey; /* Optional background color for visibility */
+}
+
+#marketButton {
+    margin-left: 10px; /* Optional margin to space out from the left edge */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#marketButton:hover {
+    background-color: #0056b3;
+}
+
+.market-gui {
+    position: absolute;
+    top: 0;
+    left: -300px; /* Initially hidden off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(255, 0, 0, 0.5);
+    transition: left 0.3s ease; /* Transition the left position */
+}
+
+.market-gui.visible {
+    left: 0; /* Slide in from the left */
+}
+/* Your existing CSS remains the same */
+
+/* Your existing CSS remains the same */
+
+#closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#closeButton:hover {
+    background-color: #cc0000;
+}
